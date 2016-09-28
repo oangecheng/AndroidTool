@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="TITLE_COMMON">#4C556E</color>
+    <color name="WHITE_COMMON">#FFFFFF</color>
+    <color name="BLUE_COMMON">#29b5ce</color>
+    <color name="RED_COMMON">#DE0000</color>
+    <color name="BLACK_COMMON">#333333</color>
+    <color name="BACKGROUND_COMMON">#FBFBFB</color>
+    <color name="UNABLE_COMMON">#D3D3D3</color>
+
+    <color name="ITEM_FOCUS">#DADADA</color>
+    <color name="WHITE_FOCUS">#BCBCBC</color>
+    <color name="BLUE_FOCUS">#2496AB</color>
+    <color name="RED_FOCUS">#C10000</color>
+    <color name="TITLE_FOCUS">#424c68</color>
+
+    <color name="SIGN_1">#D3D3D3</color>
+    <color name="SIGN_2">#AEAEAE</color>
+    <color name="LINE_1">#DDDDDD</color>
+    <color name="LINE_2">#A7A7A7</color>
+
+    <color name="BLACK_2">#666666</color>
+
+</resources>

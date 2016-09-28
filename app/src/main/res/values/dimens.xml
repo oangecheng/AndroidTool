@@ -1,0 +1,41 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="WORD_ICON">28sp</dimen>
+    <dimen name="WORD_TITLE">20sp</dimen>
+    <dimen name="WORD_BUTTON">18sp</dimen>
+    <dimen name="WORD_LEVEL_1">16sp</dimen>
+    <dimen name="WORD_LEVEL_2">14sp</dimen>
+    <dimen name="WORD_LEVEL_3">12sp</dimen>
+    <dimen name="WORD_LEVEL_4">10sp</dimen>
+
+    <dimen name="SIZE_LINE">1dp</dimen>
+
+    <dimen name="SIZE_LOGO">120dp</dimen>
+    <dimen name="SIZE_DIALOG">256dp</dimen>
+    <dimen name="SIZE_WIDGET">48dp</dimen>
+    <dimen name="SIZE_WIDGET_LARGE">56dp</dimen>
+    <dimen name="SIZE_WIDGET_SMALL">32dp</dimen>
+    <dimen name="SIZE_TITLE">48dp</dimen>
+    <dimen name="SIZE_ITEM">64dp</dimen>
+    <dimen name="SIZE_CHECKBOX">20dp</dimen>
+    <dimen name="SIZE_BOTTOM">56dp</dimen>
+    <dimen name="SIZE_INTERVAL">16dp</dimen>
+    <dimen name="SIZE_INTERVAL_MORE">12dp</dimen>
+    <dimen name="SIZE_INTERVAL_HALF">8dp</dimen>
+    <dimen name="SIZE_INTERVAL_QUARTER">4dp</dimen>
+    <dimen name="SIZE_INTERVAL_WORD">2dp</dimen>
+
+    <dimen name="SIZE_MENU">40dp</dimen>
+
+    <dimen name="BUTTON_RADIUS">4dp</dimen>
+    <dimen name="BUTTON_LENGTH">128dp</dimen>
+
+    <dimen name="p0502_card">40dp</dimen>
+    <dimen name="p0302_person">40dp</dimen>
+    <dimen name="p0302_carrier">80dp</dimen>
+    <dimen name="p0302_max_length">200dp</dimen>
+    <dimen name="p0302_send_msg">160dp</dimen>
+</resources>

@@ -1,0 +1,134 @@
+<resources>
+
+    <style name="background_common" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/BACKGROUND_COMMON</item>
+    </style>
+
+    <style name="line_common">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/SIZE_LINE</item>
+        <item name="android:background">@color/LINE_1</item>
+    </style>
+
+    <style name="text_common">
+        <item name="android:textSize">@dimen/WORD_LEVEL_1</item>
+        <item name="android:textColor">@color/BLACK_COMMON</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginLeft">@dimen/SIZE_INTERVAL</item>
+        <item name="android:layout_marginRight">@dimen/SIZE_INTERVAL</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="widget_sv_common">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scrollbars">none</item>
+    </style>
+
+    <style name="widget_lv_common">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:scrollbars">none</item>
+    </style>
+
+    <!--<style name="widget_lv_able" parent="widget_lv_common">-->
+        <!--<item name="android:listSelector">@drawable/action_item</item>-->
+    <!--</style>-->
+
+    <style name="widget_lv_unable" parent="widget_lv_common">
+        <item name="android:listSelector">@color/WHITE_COMMON</item>
+    </style>
+
+    <style name="widget_et_common">
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@color/WHITE_COMMON</item>
+        <item name="android:textColor">@color/BLACK_COMMON</item>
+        <item name="android:textSize">@dimen/WORD_LEVEL_1</item>
+        <item name="android:textColorHint">@color/SIGN_1</item>
+    </style>
+
+    <style name="widget_et_card">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">@dimen/SIZE_WIDGET_LARGE</item>
+        <item name="android:paddingTop">@dimen/SIZE_INTERVAL_MORE</item>
+        <item name="android:paddingBottom">@dimen/SIZE_INTERVAL_MORE</item>
+        <item name="android:background">@color/WHITE_COMMON</item>
+        <item name="android:textColor">@color/BLACK_2</item>
+        <item name="android:textSize">@dimen/WORD_LEVEL_1</item>
+        <item name="android:textColorHint">@color/SIGN_1</item>
+    </style>
+
+    <style name="widget_et_phone" parent="widget_et_common">
+        <item name="android:hint">@string/et_input_phone</item>
+        <item name="android:inputType">phone</item>
+        <item name="android:maxLength">11</item>
+    </style>
+
+    <style name="widget_et_account" parent="widget_et_common">
+        <item name="android:hint">@string/et_input_account</item>
+    </style>
+
+    <style name="widget_et_pass" parent="widget_et_common">
+        <item name="android:hint">@string/et_input_pass</item>
+        <item name="android:inputType">textPassword</item>
+        <item name="android:maxLength">20</item>
+    </style>
+
+    <style name="widget_et_verify" parent="widget_et_common">
+        <item name="android:hint">@string/et_input_verify</item>
+        <item name="android:maxLength">6</item>
+    </style>
+
+    <!--<style name="widget_bt_common">-->
+        <!--<item name="android:gravity">center</item>-->
+        <!--<item name="android:textColor">@drawable/action_word_white</item>-->
+        <!--<item name="android:textSize">@dimen/WORD_BUTTON</item>-->
+    <!--</style>-->
+
+    <!--<style name="widget_bt_blue" parent="widget_bt_common">-->
+        <!--<item name="android:background">@drawable/action_button_blue</item>-->
+    <!--</style>-->
+
+    <!--<style name="widget_bt_red" parent="widget_bt_common">-->
+        <!--<item name="android:background">@drawable/action_button_red</item>-->
+    <!--</style>-->
+
+    <style name="widget_iv_delete">
+        <item name="android:layout_width">@dimen/SIZE_WIDGET_LARGE</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:src">@mipmap/icon_delete_text</item>
+        <item name="android:padding">@dimen/SIZE_INTERVAL</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+    <style name="widget_iv_next">
+        <item name="android:layout_width">@dimen/SIZE_WIDGET</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:src">@mipmap/icon_next</item>
+        <item name="android:paddingLeft">@dimen/SIZE_INTERVAL</item>
+        <item name="android:paddingRight">@dimen/SIZE_INTERVAL</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="widget_iv_switch">
+        <item name="android:layout_width">@dimen/SIZE_ITEM</item>
+        <item name="android:layout_height">@dimen/SIZE_WIDGET</item>
+        <item name="android:src">@mipmap/icon_switch_on</item>
+        <item name="android:paddingLeft">@dimen/SIZE_INTERVAL_HALF</item>
+        <item name="android:paddingRight">@dimen/SIZE_INTERVAL_HALF</item>
+        <item name="android:layout_marginRight">@dimen/SIZE_INTERVAL_HALF</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="anim_popup_dir">
+        <item name="android:windowEnterAnimation">@anim/slide_in</item>
+        <item name="android:windowExitAnimation">@anim/slide_out</item>
+    </style>
+
+
+</resources>
