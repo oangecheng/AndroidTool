@@ -5,11 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
-
-import orange.com.androidtool.Database.Database;
-import orange.com.androidtool.Database.DatabaseFactory;
 import orange.com.androidtool.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,6 +19,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         initView();
+        initEvents();
+    }
+
+
+
+    private void initEvents(){
 
         btn_database.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
 
     private void initView(){

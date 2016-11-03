@@ -87,16 +87,19 @@ public class MsgTable extends Database {
     public boolean insertUserInfo(String userName, String userPassword) {
         SQLiteDatabase database = databaseHelper.getWritableDatabase();
         boolean ret = false;
-        ContentValues cv = new ContentValues();
-        cv.put(MsgEntry.USER_NAME, userName);
-        cv.put(MsgEntry.USER_PASS, userPassword);
+        try {
+            ContentValues cv = new ContentValues();
+            cv.put(MsgEntry.USER_NAME, userName);
+            cv.put(MsgEntry.USER_PASS, userPassword);
 
-        long check = database.insert(MsgEntry.TABLE_NAME, null, cv);
+            long check = database.insert(MsgEntry.TABLE_NAME, null, cv);
 
-        if (check != -1) {
-            ret = true;
+            if (check != -1) {
+                ret = true;
+            }
+        }catch (Exception e){
+            e.printStackTrace();
         }
-
         return ret;
     }
 
