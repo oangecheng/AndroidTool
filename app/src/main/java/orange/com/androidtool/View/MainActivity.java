@@ -17,13 +17,22 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
 import java.io.EOFException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.net.Socket;
 import java.net.URL;
+import java.util.List;
 
 import orange.com.androidtool.R;
 import orange.com.androidtool.Widget.ContainsEmojiEditText;
@@ -53,6 +62,54 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        new Thread(){
+            @Override
+            public void run() {
+                try {
+                    Socket socket = new Socket("192.168.1.17", 30000);
+                    BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                    String line = br.readLine();
+                    Toast.makeText(MainActivity.this, line, Toast.LENGTH_SHORT).show();
+                    br.close();
+                    socket.close();
+                }catch (IOException e){
+                    e.printStackTrace();
+                }
+            }
+        }.start();
+
+
+
+        //读取json文件当中的数据
+        StringBuilder stringBuilder = new StringBuilder();
+        try {
+            BufferedReader bf = new BufferedReader(new InputStreamReader(MainActivity.this.getAssets().open("city_code.json")));
+            String line;
+            while ((line = bf.readLine())!=null){
+                stringBuilder.append(line);
+            }
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
+        String sw = stringBuilder.toString();
+
+//        List<YourBean> list = new ArrayList();
+        try {
+            JSONArray array = new JSONArray(sw);
+            int len = array.length();
+            for (int i = 0; i<len;i++){
+                JSONObject object = array.getJSONObject(i);
+                if (object.has(CityEntry.KEY_NAME)&&object.has(CityEntry.KEY_CITY)&&object.has(CityEntry.KEY_CODE)){
+                    //list.add(new YourBean(object.getString(CityEntry.KEY_CITY));
+                }
+            }
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
+
+
         initView();
         initEvents();
 
@@ -71,6 +128,8 @@ public class MainActivity extends AppCompatActivity {
         }
         System.out.println(l);
     }
+
+
 
 
 
@@ -164,6 +223,14 @@ public class MainActivity extends AppCompatActivity {
         etText  =(EditText) findViewById(R.id.et_test);
         btnPermission = (Button)findViewById(R.id.btn_permission);
         imageView = (ImageView)findViewById(R.id.iv_net);
+    }
+
+    private static class CityEntry {
+        private static final String FILE_NAME = "city_code.json";
+        private static final String KEY_CODE = "code";
+        private static final String KEY_NAME = "name";
+        private static final String KEY_CITY = "cities";
+
     }
 
 }
